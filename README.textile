@@ -37,6 +37,7 @@ For example:
 * https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPJavaInstall
 * https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Shibboleth
 * https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Java
+* https://shibboleth.net/community/lists.html
 
 h2. Install
 
