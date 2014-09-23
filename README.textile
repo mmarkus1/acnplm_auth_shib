@@ -53,7 +53,7 @@ Then :
     @bundle install@
 * copy assets by running this command from your redmine root directory (note: the plugin has no migration for now) : @rake redmine:plugins:migrate RAILS_ENV=production@
 * restart your Redmine instance (depends on how you host it)
-    @touch tmp/restart.txt@
+    @sudo touch tmp/restart.txt@
 
 After that you *must* configure your SAML settings in
 * @plugins/acnplm_auth_shib/lib/acnplm_auth_shib/user_patch.rb@
