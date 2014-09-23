@@ -9,10 +9,10 @@ class AccountControllerTest
 
   context "GET /login SAML button" do
     should "show up only if there's a plugin setting for SAML URL" do
-      Setting["plugin_redmine_omniauth_saml"]["enabled"] = false
+      Setting["plugin_acnplm_auth_shib"]["enabled"] = false
       get :login
       assert_select '#saml-login', 0
-      Setting["plugin_redmine_omniauth_saml"]["enabled"] = true
+      Setting["plugin_acnplm_auth_shib"]["enabled"] = true
       get :login
       assert_select '#saml-login'
     end
@@ -26,7 +26,7 @@ class AccountControllerTest
         'lastname'   => 'last_name',
         'mail'       => 'mail'
       }
-      Setting["plugin_redmine_omniauth_saml"]["enabled"] = true
+      Setting["plugin_acnplm_auth_shib"]["enabled"] = true
     end
 
     should "redirect to /my/page after successful login" do

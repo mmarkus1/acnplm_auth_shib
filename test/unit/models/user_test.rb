@@ -2,7 +2,7 @@ require File.expand_path('../../../test_helper', __FILE__)
 
 class UserPatchTest < ActiveSupport::TestCase
   setup do
-    Setting['plugin_redmine_omniauth_saml']['enabled'] = true
+    Setting['plugin_acnplm_auth_shib']['enabled'] = true
     RedmineSAML[:attribute_mapping] = {
         'login'      => 'login',
         'firstname'  => 'first_name',
@@ -25,7 +25,7 @@ class UserPatchTest < ActiveSupport::TestCase
 
     context "onthefly_creation? disabled" do
       setup do
-        Setting['plugin_redmine_omniauth_saml']['onthefly_creation'] = false
+        Setting['plugin_acnplm_auth_shib']['onthefly_creation'] = false
       end
 
       should "return nil when user not exists" do
@@ -35,7 +35,7 @@ class UserPatchTest < ActiveSupport::TestCase
 
     context "onthefly_creatio? enabled" do
       setup do
-        Setting['plugin_redmine_omniauth_saml']['onthefly_creation'] = true
+        Setting['plugin_acnplm_auth_shib']['onthefly_creation'] = true
       end
 
       should "return created user" do
@@ -47,7 +47,7 @@ class UserPatchTest < ActiveSupport::TestCase
 
     context "different attribute mappings" do
       setup do
-        Setting['plugin_redmine_omniauth_saml']['onthefly_creation'] = true
+        Setting['plugin_acnplm_auth_shib']['onthefly_creation'] = true
       end
 
       should "map single level attribute" do

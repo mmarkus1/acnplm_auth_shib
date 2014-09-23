@@ -1,7 +1,7 @@
-module Redmine::OmniAuthSAML
+module Redmine::ACNPLMAuth
   class << self
     def settings_hash
-      Setting["plugin_redmine_omniauth_saml"]
+      Setting["plugin_acnplm_auth_shib"]
     end
 
     def enabled?

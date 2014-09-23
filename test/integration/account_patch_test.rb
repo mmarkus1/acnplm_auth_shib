@@ -23,8 +23,8 @@ class AccountPatchTest < ActionController::IntegrationTest
     context "OmniAuth SAML strategy" do
       setup do
         Setting.default_language = 'en'
-        Setting["plugin_redmine_omniauth_saml"]["enabled"] = true
-        Setting['plugin_redmine_omniauth_saml']['onthefly_creation']= false
+        Setting["plugin_acnplm_auth_shib"]["enabled"] = true
+        Setting['plugin_acnplm_auth_shib']['onthefly_creation']= false
         OmniAuth.config.test_mode = true
         RedmineSAML[:attribute_mapping] = {
           'login'      => 'login',
