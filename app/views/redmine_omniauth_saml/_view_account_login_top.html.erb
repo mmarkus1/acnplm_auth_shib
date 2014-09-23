@@ -1,7 +1,7 @@
-<% if Redmine::OmniAuthSAML.enabled? %>
+<% if Redmine::ACNPLMAuth.enabled? %>
 
 <% content_for :header_tags do %>
-  <%= stylesheet_link_tag "login", :plugin => "redmine_omniauth_saml" %>
+  <%= stylesheet_link_tag "login", :plugin => "acnplm_auth_shib" %>
 <% end %>
 
 <div id="saml-login">
