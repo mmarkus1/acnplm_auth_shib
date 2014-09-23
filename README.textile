@@ -18,7 +18,7 @@ Add these lines into file @/etc/httpd/conf.d/shibd.conf@ (RHEL or CentOS)
     @</Location>@
 </pre>
 
-More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home
+More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home website
 For example:
 * https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPLinuxInstall
 * https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPJavaInstall
