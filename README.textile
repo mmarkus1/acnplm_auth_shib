@@ -25,11 +25,11 @@ Add these lines into file @/etc/httpd/conf.d/shibd.conf@ (RHEL or CentOS)
 
 Restart apache
 
-@$ sudo service httpd restart@
+@sudo service httpd restart@
 
 Restart shibboleth
 
-@$ sudo service shibd restart@
+@sudo service shibd restart@
 
 More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home website
 For example:
