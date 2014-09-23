@@ -70,6 +70,7 @@ h2. Troubleshooting
 
 * Folder @redmine@ is the folder that I installed Redmine 2.4.4.
 * If your server cannot download gems from https://rubygems.org/, you have to download and install them manually.
+* Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this machine.
 * I only tested it with Redmine 2.4.4. If this plugin cannot run on other versions, a lot of Redmine and Ruby experts will help you, don't worry. Come here: "Redmine forum":http://www.redmine.org/projects/redmine/boards/2 and "Stackoverflow":http://stackoverflow.com/
 * Give good values of chown and chmod for folders (files and subfolders) @redmine/plugins/@, @redmine/public/plugin_assets@, and files @Gemfile@, @Gemfile.lock@ (and more...)
 * Look at log file @log/production.log@ when errors occured.
