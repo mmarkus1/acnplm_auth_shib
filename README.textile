@@ -43,5 +43,5 @@ Finally you need to configure some minor options for the plugin to work, in "Adm
 
 h2. Thank you
 
-Thank you very much "Christian A. Rodriguez":https://github.com/chrodriguez. All credits are yours.
+Thank you very much "Christian A. Rodriguez":https://github.com/chrodriguez. All credits are yours (errors are mine :D ).
 
