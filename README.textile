@@ -61,7 +61,7 @@ After that you *must* configure your SAML settings in
 Finally you need to configure some minor options for the plugin to work, in "Administration" > "Plugins" > "Configure" on the ACN PLM Authentication plugin line.
 
 
-h2. Remove/Restore/Uninstall plugin
+h2. Restore/Remove/Uninstall plugin
 
 * Delete folder @plugins/acnplm_auth_shib@ and folder @public/plugin_assets/acnplm_auth_shib@
 * Restart redmine @touch tmp/restart.txt@
