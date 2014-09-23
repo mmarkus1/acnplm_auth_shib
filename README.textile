@@ -4,7 +4,7 @@ This plugin adds customized Shibboleth authentication support for "Redmine":http
 
 h2. Backup
 
-Backup all things you have before appyling new changes!
+Backup all things you have before appyling new changes! Please, please, please!
 
 h2. Database
 
