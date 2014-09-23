@@ -51,8 +51,7 @@ h2. Troubleshooting
 * Folder @redmine@ is the folder that installed Redmine 2.4.4.
 * If your server cannot download gems from https://rubygems.org/, you have to download and install them manually.
 * I only tested it with Redmine 2.4.4. If this plugin cannot run on other versions, a lot of Redmine and Ruby experts will help you, don't worry. Come here: "Redmine forum":http://www.redmine.org/projects/redmine/boards/2 and "Stackoverflow":http://stackoverflow.com/
-* Give good values chown and chmod for folder @redmine/plugins/@ and @redmine/public/plugin_assets@
-
+* Give good values chown and chmod for folders (files and subfolders) @redmine/plugins/@, @redmine/public/plugin_assets@, and files @Gemfile@, @Gemfile.lock@ (and more...)
 
 h2. Thank you
 
