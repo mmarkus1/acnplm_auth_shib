@@ -47,7 +47,7 @@ Note that the plugin is now *only tested with Redmine 2.4.4*.
 
 Then :
 * clone this repository in your plugins/ directory ; if you have a doubt you put it at the good level, you can go to your redmine root directoryand check you have a @plugins/acnplm_auth_shib/init.rb@ file
-    <pre>Click 'Download ZIP' button, unzip and rename folder from acnplm_auth_shib-master to acnplm_auth_shib, upload folder acnplm_auth_shib to folder redmine/plugins/, change chown -R apache:apache acnplm_auth_shib, chmod 777 for folders, chmod 644 for files</pre>
+    <pre>Click 'Download ZIP' button, unzip and rename folder from acnplm_auth_shib-master to acnplm_auth_shib, upload folder acnplm_auth_shib to folder redmine/plugins/, change chown -R apache:apache acnplm_auth_shib, chmod 755 for folders, chmod 644 for files</pre>
 
 * install the dependencies with bundler : 
     @bundle install@
