@@ -1,20 +1,20 @@
-h1. Redmine OmniAuth SAML plugin
+h1. ACN PLM Authentication plugin
 
-This plugins adds SAML authentication support for "Redmine":http://www.redmine.org thanks to the "OmniAuth authentication framework":https://github.com/intridea/omniauth and specially thanks to "Redmine Omniauth CAS Plugin":https:https://github.com/jbbarth/redmine_omniauth_cas. 
+This plugin adds customized Shibboleth authentication support for "Redmine":http://www.redmine.org 2.4.4. Based on "Redmine Omniauth SAML":https://github.com/chrodriguez/redmine_omniauth_saml plugin of "Christian A. Rodriguez":https://github.com/chrodriguez.
 
 h2. Install
 
 You can first take a look at general instructions for plugins "here":http://www.redmine.org/wiki/redmine/Plugins.
 
-Note that the plugin is now *only compatible with Redmine 2.0.0 or higher*. 
+Note that the plugin is now *only compatible with Redmine 2.4.4 or higher*. 
 
 Then :
-* clone this repository in your plugins/ directory ; if you have a doubt you put it at the good level, you can go to your redmine root directoryand check you have a @plugins/redmine_omniauth_saml/init.rb@ file
+* clone this repository in your plugins/ directory ; if you have a doubt you put it at the good level, you can go to your redmine root directoryand check you have a @plugins/acnplm_auth_shib/init.rb@ file
 * install the dependencies with bundler : @bundle install@
-* copy assets by running this command from your redmine root directory (note: the plugin has no migration for now) : @RAILS_ENV=production rake redmine:plugins@
-* restart your Redmine instance (depends on how you host it)
+* copy assets by running this command from your redmine root directory (note: the plugin has no migration for now) : @rake redmine:plugins:migrate RAILS_ENV=production@
+* restart your Redmine instance (depends on how you host it) @touch tmp/restart.txt@
 
-Finally you *must* configure your SAML settings adding a file in @config/initializers@ for example named @saml.rb@ (the name is not important, but it must be a ruby file). A sample file is given in the plugin root folder named @sample-saml-initializers.rb@
+Finally you *must* configure your SAML settings in @plugins/acnplm_auth_shib/lib/acnplm_auth_shib/user_patch.rb@ and @plugins/acnplm_auth_shib/lib/acnplm_auth_shib/account_controller_patch.rb@.
 
-Finaly you need to configure some minor options for the plugin to work, in "Administration" > "Plugins" > "Configure" on the OmniAuth SAML plugin line.
+Finaly you need to configure some minor options for the plugin to work, in "Administration" > "Plugins" > "Configure" on the ACN PLM Authentication plugin line.
 
