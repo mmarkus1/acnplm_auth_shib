@@ -37,7 +37,7 @@ h2. Install
 
 You can first take a look at general instructions for plugins "here":http://www.redmine.org/wiki/redmine/Plugins.
 
-Note that the plugin is now *only tested with Redmine 2.4.4*:https://github.com/redmine/redmine/releases. 
+Note that the plugin is now *only tested with Redmine 2.4.4*.
 
 Then :
 * clone this repository in your plugins/ directory ; if you have a doubt you put it at the good level, you can go to your redmine root directoryand check you have a @plugins/acnplm_auth_shib/init.rb@ file
@@ -56,7 +56,7 @@ Finally you need to configure some minor options for the plugin to work, in "Adm
 
 h2. Troubleshooting
 
-* Folder @redmine@ is the folder that installed Redmine 2.4.4.
+* Folder @redmine@ is the folder that I installed Redmine 2.4.4.
 * If your server cannot download gems from https://rubygems.org/, you have to download and install them manually.
 * I only tested it with Redmine 2.4.4. If this plugin cannot run on other versions, a lot of Redmine and Ruby experts will help you, don't worry. Come here: "Redmine forum":http://www.redmine.org/projects/redmine/boards/2 and "Stackoverflow":http://stackoverflow.com/
 * Give good values chown and chmod for folders (files and subfolders) @redmine/plugins/@, @redmine/public/plugin_assets@, and files @Gemfile@, @Gemfile.lock@ (and more...)
