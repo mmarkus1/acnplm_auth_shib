@@ -9,14 +9,14 @@ Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @Null@ into table @user
 h2. Shibboleth
 
 Add these line into file @/etc/httpd/conf.d/shibd.conf@
-<code>
+
     <Location /redmine>
       AuthType shibboleth
       ShibCompatWith24 On
       ShibRequestSetting requireSession 1
       require valid-user
     </Location>
-</code>
+
 
 More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home
 
