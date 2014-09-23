@@ -31,14 +31,6 @@ Restart shibboleth
 
 @sudo service shibd restart@
 
-More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home website
-For example:
-* https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPLinuxInstall
-* https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPJavaInstall
-* https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Shibboleth
-* https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Java
-* https://shibboleth.net/community/lists.html
-
 h2. Install
 
 You can first take a look at general instructions for plugins "here":http://www.redmine.org/wiki/redmine/Plugins.
@@ -76,6 +68,13 @@ h2. Troubleshooting
 * I only tested it with Redmine 2.4.4. If this plugin cannot run on other versions, a lot of Redmine and Ruby experts will help you, don't worry. Come here: "Redmine forum":http://www.redmine.org/projects/redmine/boards/2 and "Stackoverflow":http://stackoverflow.com/
 * Give good values of chown and chmod for folders (files and subfolders) @redmine/plugins/@, @redmine/public/plugin_assets@, and files @Gemfile@, @Gemfile.lock@ (and more...)
 * Look at log file @log/production.log@ when errors occured.
+* More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home website
+    For example:
+    * https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPLinuxInstall
+    * https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPJavaInstall
+    * https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Shibboleth
+    * https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Java
+    * https://shibboleth.net/community/lists.html
 * Use at your own risk, as was I.
 
 h2. Acknowledgement - Thank you
