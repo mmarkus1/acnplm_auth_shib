@@ -75,7 +75,7 @@ h2. Troubleshooting
 * Look at log file @log/production.log@ when errors occured.
 * Use at your own risk, as was I.
 
-h2. Thank you
+h2. Acknowledgement - Thank you
 
 Thank you, thank you very much "Christian A. Rodriguez":https://github.com/chrodriguez. All credits are yours (errors are mine :D ).
 
