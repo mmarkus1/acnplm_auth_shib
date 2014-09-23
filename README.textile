@@ -8,7 +8,8 @@ Backup all things you have before appyling new changes! Please, please, please!
 
 h2. Database
 
-Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @Null@ into table @users@
+Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @Null@ into table @users@, filled in values for this column.
+Or you have to configure file @plugins/acnplm_auth_shib/lib/acnplm_auth_shib/user_patch.rb@
 
 h2. Shibboleth
 
