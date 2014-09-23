@@ -14,7 +14,7 @@ end
 Redmine::Plugin.register :acnplm_auth_shib do
   name 'ACN PLM Authentication plugin'
   description "This plugin adds customized Shibboleth authentication support to Redmine. Based on Redmine Omniauth SAML plugin of Christian A. Rodriguez."
-  author 'Phu Hung Ngo'
+  author 'Chau Khoa'
   author_url 'https://github.com/chaukhoa'
   url 'https://github.com/chaukhoa/acnplm_auth_shib'
   version '0.0.1'
