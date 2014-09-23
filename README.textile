@@ -2,6 +2,10 @@ h1. ACN PLM Authentication plugin
 
 This plugin adds customized Shibboleth authentication support for "Redmine":http://www.redmine.org 2.4.4. Based on "Redmine Omniauth SAML":https://github.com/chrodriguez/redmine_omniauth_saml plugin of "Christian A. Rodriguez":https://github.com/chrodriguez.
 
+h2. Backup
+
+Backup all things you have before appyling new changes!
+
 h2. Database
 
 Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @Null@ into table @users@
@@ -53,6 +57,12 @@ After that you *must* configure your SAML settings in
 
 
 Finally you need to configure some minor options for the plugin to work, in "Administration" > "Plugins" > "Configure" on the ACN PLM Authentication plugin line.
+
+
+h2. Remove/Restore/Uninstall plugin
+
+* Delete folder @plugins/acnplm_auth_shib@ and folder @public/plugin_assets/acnplm_auth_shib@
+* Restart redmine @touch tmp/restart.txt@
 
 h2. Troubleshooting
 
