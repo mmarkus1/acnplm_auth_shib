@@ -4,7 +4,7 @@ This plugin adds customized Shibboleth authentication support for "Redmine":http
 
 h2. Database
 
-Add one more column 'enterpriseid' - VARCHAR - 127 - Null into table users
+Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @Null@ into table @users@
 
 h2. Install
 
