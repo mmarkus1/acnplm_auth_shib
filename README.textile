@@ -6,6 +6,20 @@ h2. Database
 
 Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @Null@ into table @users@
 
+h2. Shibboleth
+
+Add these line into file @/etc/httpd/conf.d/shibd.conf@
+<pre>
+    <Location /redmine>
+      AuthType shibboleth
+      ShibCompatWith24 On
+      ShibRequestSetting requireSession 1
+      require valid-user
+    </Location>
+</pre>
+
+More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home
+
 h2. Install
 
 You can first take a look at general instructions for plugins "here":http://www.redmine.org/wiki/redmine/Plugins.
