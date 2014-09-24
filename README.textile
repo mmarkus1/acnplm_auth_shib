@@ -8,8 +8,12 @@ Backup all things you have before appyling new changes! Please, please, please!
 
 h2. Database
 
-Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @Null@ into table @users@, filled in values for this column.
+Add one more column @enterpriseid@ - @VARCHAR@ - @127@ - @utf8_general_ci@ - @Null@ into table @users@, filled in values for this column.
 Or you have to modify file @plugins/acnplm_auth_shib/lib/acnplm_auth_shib/user_patch.rb@
+
+<pre>
+ALTER TABLE `users` ADD `enterpriseid` VARCHAR(127) CHARACTER SET utf8 COLLATE utf8_general_ci NULL ;
+</pre>
 
 h2. Shibboleth
 
