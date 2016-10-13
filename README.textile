@@ -1,10 +1,6 @@
-h1. ACN PLM Authentication plugin
+h1. Shibboleth Authentication Plugin for Redmine v3.2 stable
 
-This plugin adds customized Shibboleth authentication support for "Redmine":http://www.redmine.org 2.4.4. Based on "Redmine Omniauth SAML":https://github.com/chrodriguez/redmine_omniauth_saml plugin of "Christian A. Rodriguez":https://github.com/chrodriguez.
-
-h2. Backup
-
-Backup all things you have before appyling new changes! Please, please, please!
+This plugin adds customized Shibboleth authentication support for "Redmine":http://www.redmine.org 3.2. Based on "Redmine Omniauth SAML":https://github.com/chrodriguez/redmine_omniauth_saml plugin and "ACN PLM Authentication Plugin":https://github.com/chaukhoa/acnplm_auth_shib 
 
 h2. Database
 
@@ -17,9 +13,9 @@ ALTER TABLE `users` ADD `enterpriseid` VARCHAR(127) CHARACTER SET utf8 COLLATE u
 
 h2. Shibboleth
 
-Add these lines into file @/etc/httpd/conf.d/shibd.conf@ (RHEL or CentOS)
+Add these lines into your HTTP Server file. For example for Apache2 with a shibd2 deamon: @/etc/apache2/sites-enabled/000-default@
 <pre>
-    @<Location /redmine>@
+    @<Location />@
         @AuthType shibboleth@
         @ShibCompatWith24 On@   
         @ShibRequestSetting requireSession 1@   
@@ -27,19 +23,15 @@ Add these lines into file @/etc/httpd/conf.d/shibd.conf@ (RHEL or CentOS)
     @</Location>@
 </pre>
 
-Restart apache
+Restart apache2
 
-@sudo service httpd restart@
-
-Restart shibboleth
-
-@sudo service shibd restart@
+@sudo service apache2 restart@
 
 h2. Install
 
 You can first take a look at general instructions for plugins "here":http://www.redmine.org/wiki/redmine/Plugins.
 
-Note that the plugin is now *only tested with Redmine 2.4.4*.
+Note that the plugin is now *only tested with Redmine 3.2*.
 
 Then :
 * clone this repository in your plugins/ directory ; if you have a doubt you put it at the good level, you can go to your redmine root directory and check you have a @plugins/acnplm_auth_shib/init.rb@ file
@@ -48,39 +40,15 @@ Then :
 * install the dependencies with bundler : 
     @bundle install@
 * copy assets by running this command from your redmine root directory (note: the plugin has no migration for now) : @rake redmine:plugins:migrate RAILS_ENV=production@
-After that you *must* configure your SAML settings in
+After that you *have to* configure your SAML settings especially for attribute mappings in
 * @plugins/acnplm_auth_shib/lib/acnplm_auth_shib/user_patch.rb@
 * @plugins/acnplm_auth_shib/lib/acnplm_auth_shib/account_controller_patch.rb@
 
 * restart your Redmine instance (depends on how you host it)
-    @sudo touch tmp/restart.txt@
 
 Finally you need to configure some minor options for the plugin to work, in "Administration" > "Plugins" > "Configure" on the ACN PLM Authentication plugin line.
-
 
 h2. Restore/Remove/Uninstall plugin
 
 * Delete folder @plugins/acnplm_auth_shib@ and folder @public/plugin_assets/acnplm_auth_shib@
 * Restart redmine @touch tmp/restart.txt@
-
-h2. Troubleshooting
-
-* Folder @redmine@ is the folder that I installed Redmine 2.4.4.
-* If your server cannot download gems from https://rubygems.org/, you have to download and install them manually.
-* Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this machine.
-* I only tested it with Redmine 2.4.4. If this plugin cannot run on other versions, a lot of Redmine and Ruby experts will help you, don't worry. Come here: "Redmine forum":http://www.redmine.org/projects/redmine/boards/2 and "Stackoverflow":http://stackoverflow.com/
-* Give good values of chown and chmod for folders (files and subfolders) @redmine/plugins/@, @redmine/public/plugin_assets@, and files @Gemfile@, @Gemfile.lock@ (and more...)
-* Look at log file @log/production.log@ when errors occured.
-* More information about Shibboleth, you can find at "Shibboleth Service Provider":https://wiki.shibboleth.net/confluence/display/SHIB2/Home website
-    For example:
-    * https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPLinuxInstall
-    * https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPJavaInstall
-    * https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Shibboleth
-    * https://wiki.surfnet.nl/display/surfconextdev/My+First+SP+-+Java
-    * https://shibboleth.net/community/lists.html
-* Use at your own risk, as was I.
-
-h2. Acknowledgement - Thank you
-
-Thank you, thank you very much "Christian A. Rodriguez":https://github.com/chrodriguez. All credits are yours (errors are mine :D ).
-
